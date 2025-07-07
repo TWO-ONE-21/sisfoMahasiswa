@@ -19,6 +19,8 @@ Partial Class FormMahasiswa
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         PanelMain = New Panel()
+        cboKristen = New CheckBox()
+        cboIslam = New CheckBox()
         Label1 = New Label()
         Label2 = New Label()
         txtNim = New TextBox()
@@ -34,7 +36,6 @@ Partial Class FormMahasiswa
         rdbLaki_laki = New RadioButton()
         rdbPerempuan = New RadioButton()
         Label10 = New Label()
-        cboAgama = New ComboBox()
         Label8 = New Label()
         txtAlmt = New TextBox()
         Label7 = New Label()
@@ -63,6 +64,8 @@ Partial Class FormMahasiswa
         ' PanelMain
         ' 
         PanelMain.BackColor = Color.FromArgb(CByte(32), CByte(33), CByte(36))
+        PanelMain.Controls.Add(cboKristen)
+        PanelMain.Controls.Add(cboIslam)
         PanelMain.Controls.Add(Label1)
         PanelMain.Controls.Add(Label2)
         PanelMain.Controls.Add(txtNim)
@@ -78,7 +81,6 @@ Partial Class FormMahasiswa
         PanelMain.Controls.Add(rdbLaki_laki)
         PanelMain.Controls.Add(rdbPerempuan)
         PanelMain.Controls.Add(Label10)
-        PanelMain.Controls.Add(cboAgama)
         PanelMain.Controls.Add(Label8)
         PanelMain.Controls.Add(txtAlmt)
         PanelMain.Controls.Add(Label7)
@@ -99,11 +101,31 @@ Partial Class FormMahasiswa
         PanelMain.Size = New Size(900, 600)
         PanelMain.TabIndex = 0
         ' 
+        ' cboKristen
+        ' 
+        cboKristen.AutoSize = True
+        cboKristen.Location = New Point(664, 105)
+        cboKristen.Name = "cboKristen"
+        cboKristen.Size = New Size(70, 23)
+        cboKristen.TabIndex = 30
+        cboKristen.Text = "Kristen"
+        cboKristen.UseVisualStyleBackColor = True
+        ' 
+        ' cboIslam
+        ' 
+        cboIslam.AutoSize = True
+        cboIslam.Location = New Point(598, 105)
+        cboIslam.Name = "cboIslam"
+        cboIslam.Size = New Size(60, 23)
+        cboIslam.TabIndex = 29
+        cboIslam.Text = "Islam"
+        cboIslam.UseVisualStyleBackColor = True
+        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(30, 20)
         Label1.Name = "Label1"
@@ -113,7 +135,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label2
         ' 
-        Label2.Font = New Font("Segoe UI", 10.0F)
+        Label2.Font = New Font("Segoe UI", 10F)
         Label2.ForeColor = Color.White
         Label2.Location = New Point(30, 70)
         Label2.Name = "Label2"
@@ -124,7 +146,7 @@ Partial Class FormMahasiswa
         ' txtNim
         ' 
         txtNim.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtNim.Font = New Font("Segoe UI", 10.0F)
+        txtNim.Font = New Font("Segoe UI", 10F)
         txtNim.ForeColor = Color.White
         txtNim.Location = New Point(150, 70)
         txtNim.Name = "txtNim"
@@ -134,7 +156,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label3
         ' 
-        Label3.Font = New Font("Segoe UI", 10.0F)
+        Label3.Font = New Font("Segoe UI", 10F)
         Label3.ForeColor = Color.White
         Label3.Location = New Point(30, 105)
         Label3.Name = "Label3"
@@ -145,7 +167,7 @@ Partial Class FormMahasiswa
         ' txtNamaMhs
         ' 
         txtNamaMhs.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtNamaMhs.Font = New Font("Segoe UI", 10.0F)
+        txtNamaMhs.Font = New Font("Segoe UI", 10F)
         txtNamaMhs.ForeColor = Color.White
         txtNamaMhs.Location = New Point(150, 105)
         txtNamaMhs.Name = "txtNamaMhs"
@@ -155,7 +177,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label4
         ' 
-        Label4.Font = New Font("Segoe UI", 10.0F)
+        Label4.Font = New Font("Segoe UI", 10F)
         Label4.ForeColor = Color.White
         Label4.Location = New Point(30, 140)
         Label4.Name = "Label4"
@@ -166,7 +188,7 @@ Partial Class FormMahasiswa
         ' txtTemplhr
         ' 
         txtTemplhr.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtTemplhr.Font = New Font("Segoe UI", 10.0F)
+        txtTemplhr.Font = New Font("Segoe UI", 10F)
         txtTemplhr.ForeColor = Color.White
         txtTemplhr.Location = New Point(150, 140)
         txtTemplhr.Name = "txtTemplhr"
@@ -176,7 +198,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label5
         ' 
-        Label5.Font = New Font("Segoe UI", 10.0F)
+        Label5.Font = New Font("Segoe UI", 10F)
         Label5.ForeColor = Color.White
         Label5.Location = New Point(30, 175)
         Label5.Name = "Label5"
@@ -191,7 +213,7 @@ Partial Class FormMahasiswa
         dtpTglLhr.CalendarMonthBackground = Color.FromArgb(CByte(55), CByte(55), CByte(60))
         dtpTglLhr.CalendarTitleBackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
         dtpTglLhr.CalendarTitleForeColor = Color.White
-        dtpTglLhr.Font = New Font("Segoe UI", 10.0F)
+        dtpTglLhr.Font = New Font("Segoe UI", 10F)
         dtpTglLhr.ForeColor = Color.White
         dtpTglLhr.Format = DateTimePickerFormat.Short
         dtpTglLhr.Location = New Point(150, 175)
@@ -201,7 +223,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label6
         ' 
-        Label6.Font = New Font("Segoe UI", 10.0F)
+        Label6.Font = New Font("Segoe UI", 10F)
         Label6.ForeColor = Color.White
         Label6.Location = New Point(30, 210)
         Label6.Name = "Label6"
@@ -212,17 +234,17 @@ Partial Class FormMahasiswa
         ' txtUsia
         ' 
         txtUsia.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtUsia.Font = New Font("Segoe UI", 10.0F)
+        txtUsia.Font = New Font("Segoe UI", 10F)
         txtUsia.ForeColor = Color.White
         txtUsia.Location = New Point(150, 210)
         txtUsia.Name = "txtUsia"
         txtUsia.PlaceholderText = "Usia"
-        txtUsia.Size = New Size(43, 25)
+        txtUsia.Size = New Size(55, 25)
         txtUsia.TabIndex = 10
         ' 
         ' Label11
         ' 
-        Label11.Font = New Font("Segoe UI", 10.0F)
+        Label11.Font = New Font("Segoe UI", 10F)
         Label11.ForeColor = Color.White
         Label11.Location = New Point(480, 70)
         Label11.Name = "Label11"
@@ -233,7 +255,7 @@ Partial Class FormMahasiswa
         ' rdbLaki_laki
         ' 
         rdbLaki_laki.BackColor = Color.Transparent
-        rdbLaki_laki.Font = New Font("Segoe UI", 10.0F)
+        rdbLaki_laki.Font = New Font("Segoe UI", 10F)
         rdbLaki_laki.ForeColor = Color.White
         rdbLaki_laki.Location = New Point(600, 70)
         rdbLaki_laki.Name = "rdbLaki_laki"
@@ -245,7 +267,7 @@ Partial Class FormMahasiswa
         ' rdbPerempuan
         ' 
         rdbPerempuan.BackColor = Color.Transparent
-        rdbPerempuan.Font = New Font("Segoe UI", 10.0F)
+        rdbPerempuan.Font = New Font("Segoe UI", 10F)
         rdbPerempuan.ForeColor = Color.White
         rdbPerempuan.Location = New Point(700, 70)
         rdbPerempuan.Name = "rdbPerempuan"
@@ -256,7 +278,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label10
         ' 
-        Label10.Font = New Font("Segoe UI", 10.0F)
+        Label10.Font = New Font("Segoe UI", 10F)
         Label10.ForeColor = Color.White
         Label10.Location = New Point(480, 105)
         Label10.Name = "Label10"
@@ -264,21 +286,9 @@ Partial Class FormMahasiswa
         Label10.TabIndex = 14
         Label10.Text = "Agama"
         ' 
-        ' cboAgama
-        ' 
-        cboAgama.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        cboAgama.DropDownStyle = ComboBoxStyle.DropDownList
-        cboAgama.Font = New Font("Segoe UI", 10.0F)
-        cboAgama.ForeColor = Color.White
-        cboAgama.Items.AddRange(New Object() {"Islam", "Kristen", "Budha", "Hindu", "Kong Hu Chu"})
-        cboAgama.Location = New Point(600, 105)
-        cboAgama.Name = "cboAgama"
-        cboAgama.Size = New Size(150, 25)
-        cboAgama.TabIndex = 15
-        ' 
         ' Label8
         ' 
-        Label8.Font = New Font("Segoe UI", 10.0F)
+        Label8.Font = New Font("Segoe UI", 10F)
         Label8.ForeColor = Color.White
         Label8.Location = New Point(480, 140)
         Label8.Name = "Label8"
@@ -289,7 +299,7 @@ Partial Class FormMahasiswa
         ' txtAlmt
         ' 
         txtAlmt.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtAlmt.Font = New Font("Segoe UI", 10.0F)
+        txtAlmt.Font = New Font("Segoe UI", 10F)
         txtAlmt.ForeColor = Color.White
         txtAlmt.Location = New Point(600, 140)
         txtAlmt.Multiline = True
@@ -300,7 +310,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label7
         ' 
-        Label7.Font = New Font("Segoe UI", 10.0F)
+        Label7.Font = New Font("Segoe UI", 10F)
         Label7.ForeColor = Color.White
         Label7.Location = New Point(480, 210)
         Label7.Name = "Label7"
@@ -311,7 +321,7 @@ Partial Class FormMahasiswa
         ' txtTelp
         ' 
         txtTelp.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtTelp.Font = New Font("Segoe UI", 10.0F)
+        txtTelp.Font = New Font("Segoe UI", 10F)
         txtTelp.ForeColor = Color.White
         txtTelp.Location = New Point(600, 210)
         txtTelp.Name = "txtTelp"
@@ -323,7 +333,7 @@ Partial Class FormMahasiswa
         ' 
         btnSave.BackColor = Color.FromArgb(CByte(60), CByte(63), CByte(65))
         btnSave.FlatStyle = FlatStyle.Flat
-        btnSave.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnSave.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnSave.ForeColor = Color.White
         btnSave.Location = New Point(185, 266)
         btnSave.Name = "btnSave"
@@ -336,7 +346,7 @@ Partial Class FormMahasiswa
         ' 
         btnRefresh.BackColor = Color.FromArgb(CByte(60), CByte(63), CByte(65))
         btnRefresh.FlatStyle = FlatStyle.Flat
-        btnRefresh.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnRefresh.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnRefresh.ForeColor = Color.White
         btnRefresh.Location = New Point(291, 266)
         btnRefresh.Name = "btnRefresh"
@@ -349,7 +359,7 @@ Partial Class FormMahasiswa
         ' 
         btnEdit.BackColor = Color.FromArgb(CByte(60), CByte(63), CByte(65))
         btnEdit.FlatStyle = FlatStyle.Flat
-        btnEdit.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnEdit.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnEdit.ForeColor = Color.White
         btnEdit.Location = New Point(397, 266)
         btnEdit.Name = "btnEdit"
@@ -362,7 +372,7 @@ Partial Class FormMahasiswa
         ' 
         btnDelete.BackColor = Color.FromArgb(CByte(60), CByte(63), CByte(65))
         btnDelete.FlatStyle = FlatStyle.Flat
-        btnDelete.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnDelete.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnDelete.ForeColor = Color.White
         btnDelete.Location = New Point(503, 266)
         btnDelete.Name = "btnDelete"
@@ -375,7 +385,7 @@ Partial Class FormMahasiswa
         ' 
         btnExit.BackColor = Color.FromArgb(CByte(60), CByte(63), CByte(65))
         btnExit.FlatStyle = FlatStyle.Flat
-        btnExit.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnExit.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnExit.ForeColor = Color.White
         btnExit.Location = New Point(609, 266)
         btnExit.Name = "btnExit"
@@ -386,7 +396,7 @@ Partial Class FormMahasiswa
         ' 
         ' Label9
         ' 
-        Label9.Font = New Font("Segoe UI", 10.0F)
+        Label9.Font = New Font("Segoe UI", 10F)
         Label9.ForeColor = Color.White
         Label9.Location = New Point(30, 320)
         Label9.Name = "Label9"
@@ -397,7 +407,7 @@ Partial Class FormMahasiswa
         ' txtCariData
         ' 
         txtCariData.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtCariData.Font = New Font("Segoe UI", 10.0F)
+        txtCariData.Font = New Font("Segoe UI", 10F)
         txtCariData.ForeColor = Color.White
         txtCariData.Location = New Point(120, 320)
         txtCariData.Name = "txtCariData"
@@ -409,7 +419,7 @@ Partial Class FormMahasiswa
         ' 
         btnCariData.BackColor = Color.FromArgb(CByte(60), CByte(63), CByte(65))
         btnCariData.FlatStyle = FlatStyle.Flat
-        btnCariData.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        btnCariData.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnCariData.ForeColor = Color.White
         btnCariData.Location = New Point(380, 318)
         btnCariData.Name = "btnCariData"
@@ -422,7 +432,7 @@ Partial Class FormMahasiswa
         ' 
         ListView1.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
         ListView1.Columns.AddRange(New ColumnHeader() {ColumnHeader2, ColumnHeader1, ColumnHeader3, ColumnHeader4, ColumnHeader5, ColumnHeader6, ColumnHeader7, ColumnHeader8, ColumnHeader9})
-        ListView1.Font = New Font("Segoe UI", 10.0F)
+        ListView1.Font = New Font("Segoe UI", 10F)
         ListView1.ForeColor = Color.White
         ListView1.FullRowSelect = True
         ListView1.GridLines = True
@@ -481,12 +491,12 @@ Partial Class FormMahasiswa
         ' 
         ' FormMahasiswa
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 17.0F)
+        AutoScaleDimensions = New SizeF(7F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(32), CByte(33), CByte(36))
         ClientSize = New Size(900, 600)
         Controls.Add(PanelMain)
-        Font = New Font("Segoe UI", 10.0F)
+        Font = New Font("Segoe UI", 10F)
         ForeColor = Color.White
         Name = "FormMahasiswa"
         Text = "FormMahasiswa"
@@ -511,7 +521,6 @@ Partial Class FormMahasiswa
     Friend WithEvents rdbLaki_laki As RadioButton
     Friend WithEvents rdbPerempuan As RadioButton
     Friend WithEvents Label10 As Label
-    Friend WithEvents cboAgama As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txtAlmt As TextBox
     Friend WithEvents Label7 As Label
@@ -534,4 +543,6 @@ Partial Class FormMahasiswa
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents cboIslam As CheckBox
+    Friend WithEvents cboKristen As CheckBox
 End Class

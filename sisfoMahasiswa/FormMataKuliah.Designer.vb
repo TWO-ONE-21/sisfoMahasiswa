@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormDosen
+Partial Class FormMataKuliah
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,14 +24,12 @@ Partial Class FormDosen
     Private Sub InitializeComponent()
         PanelMain = New Panel()
         LabelTitle = New Label()
-        LabelNidn = New Label()
-        txtNidn = New TextBox()
-        LabelNamaDosen = New Label()
-        txtNamaDosen = New TextBox()
-        LabelEmail = New Label()
-        txtEmail = New TextBox()
-        LabelTelp = New Label()
-        txtTelp = New TextBox()
+        LabelKdMtk = New Label()
+        txtKdMtk = New TextBox()
+        LabelNamaMtk = New Label()
+        txtNamaMtk = New TextBox()
+        LabelSKS = New Label()
+        txtSKS = New TextBox()
         btnSave = New Button()
         btnRefresh = New Button()
         btnEdit = New Button()
@@ -44,7 +42,6 @@ Partial Class FormDosen
         ColumnHeader1 = New ColumnHeader()
         ColumnHeader2 = New ColumnHeader()
         ColumnHeader3 = New ColumnHeader()
-        ColumnHeader4 = New ColumnHeader()
         PanelMain.SuspendLayout()
         SuspendLayout()
         ' 
@@ -52,14 +49,12 @@ Partial Class FormDosen
         ' 
         PanelMain.BackColor = Color.FromArgb(CByte(32), CByte(33), CByte(36))
         PanelMain.Controls.Add(LabelTitle)
-        PanelMain.Controls.Add(LabelNidn)
-        PanelMain.Controls.Add(txtNidn)
-        PanelMain.Controls.Add(LabelNamaDosen)
-        PanelMain.Controls.Add(txtNamaDosen)
-        PanelMain.Controls.Add(LabelEmail)
-        PanelMain.Controls.Add(txtEmail)
-        PanelMain.Controls.Add(LabelTelp)
-        PanelMain.Controls.Add(txtTelp)
+        PanelMain.Controls.Add(LabelKdMtk)
+        PanelMain.Controls.Add(txtKdMtk)
+        PanelMain.Controls.Add(LabelNamaMtk)
+        PanelMain.Controls.Add(txtNamaMtk)
+        PanelMain.Controls.Add(LabelSKS)
+        PanelMain.Controls.Add(txtSKS)
         PanelMain.Controls.Add(btnSave)
         PanelMain.Controls.Add(btnRefresh)
         PanelMain.Controls.Add(btnEdit)
@@ -73,115 +68,97 @@ Partial Class FormDosen
         PanelMain.Location = New Point(0, 0)
         PanelMain.Name = "PanelMain"
         PanelMain.Padding = New Padding(30)
-        PanelMain.Size = New Size(788, 701)
+        PanelMain.Size = New Size(1200, 600)
         PanelMain.TabIndex = 0
         ' 
         ' LabelTitle
         ' 
         LabelTitle.AutoSize = True
-        LabelTitle.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        LabelTitle.Font = New Font("Segoe UI", 14.0F, FontStyle.Bold)
         LabelTitle.ForeColor = Color.RoyalBlue
         LabelTitle.Location = New Point(30, 20)
         LabelTitle.Name = "LabelTitle"
-        LabelTitle.Size = New Size(315, 37)
+        LabelTitle.Size = New Size(263, 25)
         LabelTitle.TabIndex = 0
-        LabelTitle.Text = "Form Input Data Dosen"
+        LabelTitle.Text = "Form Input Data Matakuliah"
         ' 
-        ' LabelNidn
+        ' LabelKdMtk
         ' 
-        LabelNidn.Font = New Font("Segoe UI", 11F)
-        LabelNidn.ForeColor = Color.White
-        LabelNidn.Location = New Point(30, 90)
-        LabelNidn.Name = "LabelNidn"
-        LabelNidn.Size = New Size(120, 30)
-        LabelNidn.TabIndex = 1
-        LabelNidn.Text = "NIDN"
-        LabelNidn.TextAlign = ContentAlignment.MiddleLeft
+        LabelKdMtk.Font = New Font("Segoe UI", 11.0F)
+        LabelKdMtk.ForeColor = Color.White
+        LabelKdMtk.Location = New Point(30, 80)
+        LabelKdMtk.Name = "LabelKdMtk"
+        LabelKdMtk.Size = New Size(120, 30)
+        LabelKdMtk.TabIndex = 1
+        LabelKdMtk.Text = "Kode MTK"
+        LabelKdMtk.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' txtNidn
+        ' txtKdMtk
         ' 
-        txtNidn.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtNidn.Font = New Font("Segoe UI", 11F)
-        txtNidn.ForeColor = Color.White
-        txtNidn.Location = New Point(182, 90)
-        txtNidn.Name = "txtNidn"
-        txtNidn.Size = New Size(250, 27)
-        txtNidn.TabIndex = 2
+        txtKdMtk.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
+        txtKdMtk.Font = New Font("Segoe UI", 11.0F)
+        txtKdMtk.ForeColor = Color.White
+        txtKdMtk.Location = New Point(170, 80)
+        txtKdMtk.Name = "txtKdMtk"
+        txtKdMtk.PlaceholderText = "Masukkan Kode Mata Kuliah"
+        txtKdMtk.Size = New Size(200, 27)
+        txtKdMtk.TabIndex = 2
         ' 
-        ' LabelNamaDosen
+        ' LabelNamaMtk
         ' 
-        LabelNamaDosen.Font = New Font("Segoe UI", 11F)
-        LabelNamaDosen.ForeColor = Color.White
-        LabelNamaDosen.Location = New Point(30, 135)
-        LabelNamaDosen.Name = "LabelNamaDosen"
-        LabelNamaDosen.Size = New Size(146, 30)
-        LabelNamaDosen.TabIndex = 3
-        LabelNamaDosen.Text = "Nama Dosen"
-        LabelNamaDosen.TextAlign = ContentAlignment.MiddleLeft
+        LabelNamaMtk.Font = New Font("Segoe UI", 11.0F)
+        LabelNamaMtk.ForeColor = Color.White
+        LabelNamaMtk.Location = New Point(30, 125)
+        LabelNamaMtk.Name = "LabelNamaMtk"
+        LabelNamaMtk.Size = New Size(120, 30)
+        LabelNamaMtk.TabIndex = 3
+        LabelNamaMtk.Text = "Nama MTK"
+        LabelNamaMtk.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' txtNamaDosen
+        ' txtNamaMtk
         ' 
-        txtNamaDosen.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtNamaDosen.Font = New Font("Segoe UI", 11F)
-        txtNamaDosen.ForeColor = Color.White
-        txtNamaDosen.Location = New Point(182, 135)
-        txtNamaDosen.Name = "txtNamaDosen"
-        txtNamaDosen.Size = New Size(350, 27)
-        txtNamaDosen.TabIndex = 4
+        txtNamaMtk.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
+        txtNamaMtk.Font = New Font("Segoe UI", 11.0F)
+        txtNamaMtk.ForeColor = Color.White
+        txtNamaMtk.Location = New Point(170, 125)
+        txtNamaMtk.Name = "txtNamaMtk"
+        txtNamaMtk.PlaceholderText = "Masukkan Nama Mata Kuliah"
+        txtNamaMtk.Size = New Size(350, 27)
+        txtNamaMtk.TabIndex = 4
         ' 
-        ' LabelEmail
+        ' LabelSKS
         ' 
-        LabelEmail.Font = New Font("Segoe UI", 11F)
-        LabelEmail.ForeColor = Color.White
-        LabelEmail.Location = New Point(30, 180)
-        LabelEmail.Name = "LabelEmail"
-        LabelEmail.Size = New Size(120, 30)
-        LabelEmail.TabIndex = 5
-        LabelEmail.Text = "E-Mail"
-        LabelEmail.TextAlign = ContentAlignment.MiddleLeft
+        LabelSKS.Font = New Font("Segoe UI", 11.0F)
+        LabelSKS.ForeColor = Color.White
+        LabelSKS.Location = New Point(30, 170)
+        LabelSKS.Name = "LabelSKS"
+        LabelSKS.Size = New Size(120, 30)
+        LabelSKS.TabIndex = 5
+        LabelSKS.Text = "SKS"
+        LabelSKS.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' txtEmail
+        ' txtSKS
         ' 
-        txtEmail.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtEmail.Font = New Font("Segoe UI", 11F)
-        txtEmail.ForeColor = Color.White
-        txtEmail.Location = New Point(182, 180)
-        txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(350, 27)
-        txtEmail.TabIndex = 6
-        ' 
-        ' LabelTelp
-        ' 
-        LabelTelp.Font = New Font("Segoe UI", 11F)
-        LabelTelp.ForeColor = Color.White
-        LabelTelp.Location = New Point(30, 225)
-        LabelTelp.Name = "LabelTelp"
-        LabelTelp.Size = New Size(136, 30)
-        LabelTelp.TabIndex = 7
-        LabelTelp.Text = "Telepon/HP"
-        LabelTelp.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' txtTelp
-        ' 
-        txtTelp.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtTelp.Font = New Font("Segoe UI", 11F)
-        txtTelp.ForeColor = Color.White
-        txtTelp.Location = New Point(182, 225)
-        txtTelp.Name = "txtTelp"
-        txtTelp.Size = New Size(250, 27)
-        txtTelp.TabIndex = 8
+        txtSKS.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
+        txtSKS.Font = New Font("Segoe UI", 11.0F)
+        txtSKS.ForeColor = Color.White
+        txtSKS.Location = New Point(170, 170)
+        txtSKS.Name = "txtSKS"
+        txtSKS.PlaceholderText = "SKS"
+        txtSKS.Size = New Size(80, 27)
+        txtSKS.TabIndex = 6
         ' 
         ' btnSave
         ' 
         btnSave.BackColor = Color.FromArgb(CByte(39), CByte(174), CByte(96))
         btnSave.FlatStyle = FlatStyle.Flat
-        btnSave.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        btnSave.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         btnSave.ForeColor = Color.White
         btnSave.Image = My.Resources.Resources.save
-        btnSave.Location = New Point(180, 280)
+        btnSave.Location = New Point(170, 220)
         btnSave.Name = "btnSave"
-        btnSave.Size = New Size(110, 36)
-        btnSave.TabIndex = 9
+        btnSave.Size = New Size(97, 36)
+        btnSave.TabIndex = 7
         btnSave.Text = "Save"
         btnSave.TextImageRelation = TextImageRelation.ImageBeforeText
         btnSave.UseVisualStyleBackColor = False
@@ -190,13 +167,13 @@ Partial Class FormDosen
         ' 
         btnRefresh.BackColor = Color.FromArgb(CByte(243), CByte(156), CByte(18))
         btnRefresh.FlatStyle = FlatStyle.Flat
-        btnRefresh.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        btnRefresh.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         btnRefresh.ForeColor = Color.White
         btnRefresh.Image = My.Resources.Resources.refresh
-        btnRefresh.Location = New Point(538, 280)
+        btnRefresh.Location = New Point(485, 220)
         btnRefresh.Name = "btnRefresh"
-        btnRefresh.Size = New Size(110, 36)
-        btnRefresh.TabIndex = 10
+        btnRefresh.Size = New Size(97, 36)
+        btnRefresh.TabIndex = 8
         btnRefresh.Text = "Refresh"
         btnRefresh.TextImageRelation = TextImageRelation.ImageBeforeText
         btnRefresh.UseVisualStyleBackColor = False
@@ -205,13 +182,13 @@ Partial Class FormDosen
         ' 
         btnEdit.BackColor = Color.FromArgb(CByte(41), CByte(128), CByte(185))
         btnEdit.FlatStyle = FlatStyle.Flat
-        btnEdit.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        btnEdit.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         btnEdit.ForeColor = Color.White
         btnEdit.Image = My.Resources.Resources.edit1
-        btnEdit.Location = New Point(300, 280)
+        btnEdit.Location = New Point(275, 220)
         btnEdit.Name = "btnEdit"
-        btnEdit.Size = New Size(110, 36)
-        btnEdit.TabIndex = 11
+        btnEdit.Size = New Size(97, 36)
+        btnEdit.TabIndex = 9
         btnEdit.Text = "Edit"
         btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText
         btnEdit.UseVisualStyleBackColor = False
@@ -220,13 +197,13 @@ Partial Class FormDosen
         ' 
         btnDelete.BackColor = Color.FromArgb(CByte(192), CByte(57), CByte(43))
         btnDelete.FlatStyle = FlatStyle.Flat
-        btnDelete.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        btnDelete.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         btnDelete.ForeColor = Color.White
         btnDelete.Image = My.Resources.Resources.delete
-        btnDelete.Location = New Point(420, 280)
+        btnDelete.Location = New Point(380, 220)
         btnDelete.Name = "btnDelete"
-        btnDelete.Size = New Size(110, 36)
-        btnDelete.TabIndex = 12
+        btnDelete.Size = New Size(97, 36)
+        btnDelete.TabIndex = 10
         btnDelete.Text = "Delete"
         btnDelete.TextImageRelation = TextImageRelation.ImageBeforeText
         btnDelete.UseVisualStyleBackColor = False
@@ -235,99 +212,96 @@ Partial Class FormDosen
         ' 
         btnExit.BackColor = Color.FromArgb(CByte(127), CByte(140), CByte(141))
         btnExit.FlatStyle = FlatStyle.Flat
-        btnExit.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        btnExit.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         btnExit.ForeColor = Color.White
         btnExit.Image = My.Resources.Resources._exit
-        btnExit.Location = New Point(658, 280)
+        btnExit.Location = New Point(590, 220)
         btnExit.Name = "btnExit"
-        btnExit.Size = New Size(110, 36)
-        btnExit.TabIndex = 13
+        btnExit.Size = New Size(97, 36)
+        btnExit.TabIndex = 11
         btnExit.Text = "Exit"
         btnExit.TextImageRelation = TextImageRelation.ImageBeforeText
         btnExit.UseVisualStyleBackColor = False
         ' 
         ' LabelCari
         ' 
-        LabelCari.Font = New Font("Segoe UI", 11F)
+        LabelCari.Font = New Font("Segoe UI", 11.0F)
         LabelCari.ForeColor = Color.White
-        LabelCari.Location = New Point(30, 340)
+        LabelCari.Location = New Point(30, 280)
         LabelCari.Name = "LabelCari"
-        LabelCari.Size = New Size(120, 30)
-        LabelCari.TabIndex = 14
+        LabelCari.Size = New Size(100, 30)
+        LabelCari.TabIndex = 12
         LabelCari.Text = "Pencarian"
         LabelCari.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' txtCari
         ' 
         txtCari.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        txtCari.Font = New Font("Segoe UI", 11F)
+        txtCari.Font = New Font("Segoe UI", 11.0F)
         txtCari.ForeColor = Color.White
-        txtCari.Location = New Point(170, 340)
+        txtCari.Location = New Point(170, 280)
         txtCari.Name = "txtCari"
         txtCari.Size = New Size(350, 27)
-        txtCari.TabIndex = 15
+        txtCari.TabIndex = 13
         ' 
         ' btnCari
         ' 
         btnCari.BackColor = Color.FromArgb(CByte(60), CByte(63), CByte(65))
-        btnCari.FlatStyle = FlatStyle.Popup
-        btnCari.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        btnCari.FlatStyle = FlatStyle.Flat
+        btnCari.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold)
         btnCari.ForeColor = Color.White
-        btnCari.Location = New Point(530, 338)
+        btnCari.Location = New Point(530, 278)
         btnCari.Name = "btnCari"
         btnCari.Size = New Size(100, 36)
-        btnCari.TabIndex = 16
-        btnCari.Text = "Cari"
+        btnCari.TabIndex = 14
+        btnCari.Text = "Cari Data"
         btnCari.UseVisualStyleBackColor = False
         ' 
         ' ListView1
         ' 
         ListView1.BackColor = Color.FromArgb(CByte(55), CByte(55), CByte(60))
-        ListView1.Columns.AddRange(New ColumnHeader() {ColumnHeader1, ColumnHeader2, ColumnHeader3, ColumnHeader4})
-        ListView1.Font = New Font("Segoe UI", 11F)
+        ListView1.Columns.AddRange(New ColumnHeader() {ColumnHeader1, ColumnHeader2, ColumnHeader3})
+        ListView1.Font = New Font("Segoe UI", 11.0F)
         ListView1.ForeColor = Color.White
         ListView1.FullRowSelect = True
         ListView1.GridLines = True
         ListView1.HeaderStyle = ColumnHeaderStyle.Nonclickable
-        ListView1.Location = New Point(30, 400)
+        ListView1.Location = New Point(30, 340)
         ListView1.Name = "ListView1"
-        ListView1.Size = New Size(724, 300)
-        ListView1.TabIndex = 17
+        ListView1.Size = New Size(630, 220)
+        ListView1.TabIndex = 15
         ListView1.UseCompatibleStateImageBehavior = False
         ListView1.View = View.Details
         ' 
         ' ColumnHeader1
         ' 
-        ColumnHeader1.Text = "NIDN"
-        ColumnHeader1.Width = 200
+        ColumnHeader1.Text = "Kode Mata Kuliah"
+        ColumnHeader1.Width = 150
         ' 
         ' ColumnHeader2
         ' 
-        ColumnHeader2.Text = "Nama Dosen"
-        ColumnHeader2.Width = 200
+        ColumnHeader2.Text = "Nama Mata Kuliah"
+        ColumnHeader2.TextAlign = HorizontalAlignment.Center
+        ColumnHeader2.Width = 400
         ' 
         ' ColumnHeader3
         ' 
-        ColumnHeader3.Text = "E-Mail"
-        ColumnHeader3.Width = 200
+        ColumnHeader3.Text = "SKS"
+        ColumnHeader3.TextAlign = HorizontalAlignment.Center
+        ColumnHeader3.Width = 80
         ' 
-        ' ColumnHeader4
+        ' FormMataKuliah
         ' 
-        ColumnHeader4.Text = "Telepon/HP"
-        ColumnHeader4.Width = 120
-        ' 
-        ' FormDosen
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(32), CByte(33), CByte(36))
-        ClientSize = New Size(788, 701)
+        ClientSize = New Size(1200, 600)
         Controls.Add(PanelMain)
-        Font = New Font("Segoe UI", 11F)
+        Font = New Font("Segoe UI", 11.0F)
         ForeColor = Color.White
-        Name = "FormDosen"
+        Name = "FormMataKuliah"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form Input Data Dosen"
+        Text = "Form Input Data Matakuliah"
         PanelMain.ResumeLayout(False)
         PanelMain.PerformLayout()
         ResumeLayout(False)
@@ -335,17 +309,14 @@ Partial Class FormDosen
 
     Friend WithEvents PanelMain As Panel
     Friend WithEvents LabelTitle As Label
-    Friend WithEvents LabelNidn As Label
-    Friend WithEvents txtNidn As TextBox
-    Friend WithEvents LabelNamaDosen As Label
-    Friend WithEvents txtNamaDosen As TextBox
-    Friend WithEvents LabelEmail As Label
-    Friend WithEvents txtEmail As TextBox
-    Friend WithEvents LabelTelp As Label
-    Friend WithEvents txtTelp As TextBox
+    Friend WithEvents LabelKdMtk As Label
+    Friend WithEvents txtKdMtk As TextBox
+    Friend WithEvents LabelNamaMtk As Label
+    Friend WithEvents txtNamaMtk As TextBox
+    Friend WithEvents LabelSKS As Label
+    Friend WithEvents txtSKS As TextBox
     Friend WithEvents btnSave As Button
     Friend WithEvents btnRefresh As Button
-    Friend WithEvents btnEdit As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents LabelCari As Label
@@ -355,5 +326,5 @@ Partial Class FormDosen
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents btnEdit As Button
 End Class
